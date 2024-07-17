@@ -1,0 +1,25 @@
+=======Start=======
+Wed Nov  1 19:22:19 PDT 2023
+My machine has this many processors
+12
+Generating 1000000 random numbers
+argv[0]:./generate
+argv[1]:1000000
+argv[2]:100000
+argv[3]:999999
+Starting system sort
+
+real	0m0.173s
+user	0m0.651s
+sys	0m0.040s
+Starting my sort
+
+real	0m15.176s
+user	2m12.853s
+sys	0m1.390s
+-rw-r--r-- 1 alvinlh alvinlh 7000000 Nov  1 19:22 systemsort.out
+-rw-r--r-- 1 alvinlh alvinlh 7000000 Nov  1 19:22 mysort.out
+Comparing systemsort.out to mysort.out
+All done
+=======End=======
+Wed Nov  1 19:22:42 PDT 2023
