@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FAVICON OR WEBSITE ICON-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!--RESOURCE USED-->
+    <!--ICON PACK FROM REMIXICON.COM-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cartalog</title>
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-steering-fill"></i>
+                Cartalog
+            </a>
+        </nav>
+    </header>
+
+    <!--MAIN SECTION-->
+    <main class="main">
+        <!--HOME SECTION-->
+        <section class="home section" id="home">
+            <div class="shape shape__big"></div>
+            <div class="shape shape__small"></div>
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Select a Car
+                    </h1>
+                    <!-- CAR DESCRIPTION -->
+                    <div class="home__car-tooltip">
+                        <p class="home__car-description"></p>
+                    </div>
+                    <h2 class="home__subtitle">
+                        N/A
+                    </h2>
+                    <h3 class="home__type">
+                        <i class="ri-car-fill"></i>
+                        Car
+                    </h3>
+                </div>
+                <img src="img/audi/audi-home.png" alt="" class="home__img">
+                <div class="home__car">
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-speed-up-line"></i>
+                        </div>
+                        <h2 class="home__car-number">N/A</h2>
+                        <h3 class="home__car-name">HORSEPOWER</h3>
+                    </div>
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-settings-5-line"></i>
+                        </div>
+                        <h2 class="home__car-number">N/A</h2>
+                        <h3 class="home__car-name">ENGINE</h3>
+                    </div>
+                    <div class="home__car-data">
+                        <div class="home__car-icon">
+                            <i class="ri-gas-station-fill"></i>
+                        </div>
+                        <h2 class="home__car-number">N/A</h2>
+                        <h3 class="home__car-name">EPA ESTIMATES</h3>
+                    </div>
+                </div>
+                <a href="#" class="home__button">START</a>
+            </div>
+        </section>
+
+        <!--ABOUT SECTION-->
+        <section class="about section" id="about">
+            <div class="about__wrapper">
+                <div class="about__container container grid" id="car-options-container">
+                    <!-- CAR OPTIONS WILL DYNAMICALLY DISPLAY -->
+                </div>
+            </div>
+        </section>
+
+        <div class="comparison-section">
+            <h2 class="comparison-section__title">Compare Cars</h2>
+            <div class="comparison-container" id="comparison-container">
+                <!-- COMPARISON UI ELEMENTS DYNAMICALLY DISPLAY -->
+            </div>
+            <div id="add-remove-car-form">
+                <label for="add-car">Add Car:</label>
+                <select id="add-car">
+                    <option value=""></option>
+                    <!-- CAR SELECTION -->
+                </select>
+                <button onclick="addCar()">Add</button>
+                <button id="clear-comparison-button">Clear Comparison</button>
+            </div>
+            <button onclick="compareCars()">Compare</button>
+        </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="container">
+            <h3 class="footer__title">Cartalog</h3>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

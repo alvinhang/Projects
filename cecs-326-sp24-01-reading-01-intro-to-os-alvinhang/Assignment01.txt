@@ -1,0 +1,45 @@
+Reading Assignment 1 - Alvin Hang
+
+1. What are the two main functions of an operating system?
+The two main functions of an operating system is one, the abstract set of resources provided in a clean format, and two able to manage the hardware resources. Resource management is visible to the users and is automatic. Because resource management is done automatically, the user programs and operating system mainly has to work with the abstractions.
+
+
+2. What is the difference between timesharing and multiprogramming systems?
+Timesharing is a type of multiprogramming, each user has their own online terminal. This allows for individuals to have different terminals at the same time. Multiprogramming assigns computer's resources to execute multiple processes which processes the states as well as switch between each process. 
+
+
+3. The family-of-computers idea was introduced in the 1960s with the IBM System/360 mainframes. Is this idea now dead as a doornail or does it live on?
+The family-of-computers idea I think still does live on. One instance for this case is Apple and how they created an ecosystem with all their products. For Apple's Macbook line, there are different form factors of laptops that utilize the same processor. So in this instance it is very much alive and not dead as a doornail.
+
+
+4. What is the difference between kernel and user mode? Explain how having two distinct modes aids in designing an operating system.
+Kernel mode is the supervisor mode that has full access to all hardware and is able to execute any form of instructions that the machines are able to execute. User mode is a subset of instructions for the machine that is accessible. Control of machine or Input and output is blocked for the user mode. Having two modes separates the ugly for users, this way the end user is able to utilize the OS through a pretty interface instead of the ugly interface produced by the hardware.
+
+
+5. On early computers, every byte of data read or written was handled by the CPU (i.e., there was no DMA). What implications does this have for multiprogramming?
+The implications of multiprogramming would be having long CPU idle wait time. Instead, having the CPU create partitions of processing reduces time spent significantly. This is why multiprogramming was made, to create memory partitions that run in a bigger batch.
+
+
+6. There are several design goals in building an operating system, for example, resource utilization, timeliness, robustness, and so on. Give an example of two design goals that may contradict one another.
+Timeliness and resource utilization could be two design goals that contradict one another due to timeliness wanting to do a task at a good time versus resource utilization which maximizes the resources to perform a task efficiently.
+
+
+7. Which of the following instructions should be allowed only in kernel mode?
+    (a) Disable all interrupts.
+    (b) Read the time-of-day clock.
+    (c) Set the time-of-day clock. 
+    (d) Change the memory map.
+I believe A,C,D should be allowed in kernel mode only. This is because again, kernel mode is the supervisor mode which should have the privilege of disabling all interrupts, set the time-of-day, and change memory maps. The user mode should be allowed to read the time-of-day so it shouldn't be kernel mode only for that case.
+
+
+8. Consider a system that has two CPUs, each CPU having two threads (hyperthreading). Suppose three programs, P0, P1, and P2, are started with run times of 5, 10 and 20 msec, respectively. How long will it take to complete the execution of these programs? Assume that all three programs are 100% CPU bound, do not block during execution, and do not change CPUs once assigned.
+Well if there are two threads that are then assigned to run three programs, each run time goes from 5 to 20 msecs, then that should set the completion time to 20msecs total. if one thread were to run one program and finish in 5 msecs, then it would move to the next program which takes 10msecs. The 2nd thread would still be running while the other two programs are finished within a total of 15msecs. So, no matter what, the completion time for all 3 programs would be 20msecs.
+
+
+9. What is a trap instruction? Explain its use in operating systems.
+The trap instruction is an instruction that switches from user mode to kernel mode, this would then run the operating system. This gives temporary usage for a task in kernel mode until the task is completed which it would then switch back to user mode.
+
+
+10. Modern operating systems decouple a process address space from the machine’s physical memory. List two advantages of this design.
+This gives flexibility for modern operating systems, which I think helps with user mode changes what they need to do in terms of running programs and so on. This in terms of policy being defined by user mode, flexibility of the operating system is beneficial. By moving policy out of kernel, the kernel is able to reduce its size which should improve its performance.
+
